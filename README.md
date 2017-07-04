@@ -1,3 +1,9 @@
+## Usage
+For training, `python main.py`
+<br>
+For testing, `python main.py --is_train False --stride 21 --test_path ./test.bmp`
+#References
+https://github.com/tegg89/SRCNN-Tensorflow
 # SRCNN-Tensorflow
 Tensorflow implementation of Convolutional Neural Networks for super-resolution. The original Matlab and Caffe from official website can be found [here](http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html).
 
@@ -12,7 +18,7 @@ This code requires Tensorflow. Also scipy is used instead of Matlab or OpenCV. E
 ## Usage
 For training, `python main.py`
 <br>
-For testing, `python main.py --is_train False --stride 21`
+For testing, `python main.py --is_train False --stride 21 --test_path ./test.bmp`
 
 ## Result
 After training 15,000 epochs, I got similar super-resolved image to reference paper. Training time takes 12 hours 16 minutes and 1.41 seconds. My desktop performance is Intel I7-6700 CPU, GTX970, and 16GB RAM. Result images are shown below.<br><br>

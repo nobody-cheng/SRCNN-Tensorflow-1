@@ -7,10 +7,11 @@ from utils import (
 
 import time
 import os
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 import numpy as np
 import tensorflow as tf
+import sys
 
 class SRCNN(object):
 
@@ -67,7 +68,6 @@ class SRCNN(object):
       data_dir = os.path.join('./{}'.format(config.checkpoint_dir), "train.h5")
     else:
       data_dir = os.path.join('./{}'.format(config.checkpoint_dir), "test.h5")
-
     train_data, train_label = read_data(data_dir)
 
     # Stochastic gradient descent with the standard backpropagation

@@ -6,7 +6,7 @@ import os
 import glob
 import h5py
 import random
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 from PIL import Image  # for loading images as YCbCr format
 import scipy.misc
@@ -15,6 +15,7 @@ import numpy as np
 
 import tensorflow as tf
 
+#matplotlib.use('Agg')
 FLAGS = tf.app.flags.FLAGS
 
 def read_data(path):
@@ -152,7 +153,8 @@ def input_setup(sess, config):
           sub_label_sequence.append(sub_label)
 
   else:
-    input_, label_ = preprocess(data[2], config.scale)
+    #input_, label_ = preprocess(data[2], config.scale)
+    input_, label_ = preprocess(config.test_path, config.scale)
 
     if len(input_.shape) == 3:
       h, w, _ = input_.shape
